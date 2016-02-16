@@ -82,7 +82,7 @@ def _eventdatapush(message, timestamp, token, url):
     data = {
         'message': 		message,
         'timestamp': 	timestamp,
-        'subject':		'subject'}
+        'subject':		'a'}
     headers = {'HTTPAuthorization': token}
     req = requests.post(url, data=data, headers=headers, timeout=1)
     if req.status_code != 200:
