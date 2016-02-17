@@ -40,7 +40,7 @@ def _login(accesstoken, url):
 
 def _eventpush(name, token, url):
     '''
-    Create and event using the event name.
+    Create an event using the event name.
 
     The following parameters are required:
     name
@@ -55,7 +55,8 @@ def _eventpush(name, token, url):
     data = {'name':			name,
             'description':	'',
             'type':			'',
-            'source':		'SaltStack'}
+            'source':		'SaltStack',
+            'icon':         'salt'}
     headers = {'HTTPAuthorization': token}
     req = requests.post(url, data=data, headers=headers, timeout=1)
     if req.status_code == 409 or req.status_code == 200:
