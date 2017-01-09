@@ -55,7 +55,7 @@ def _eventpush(name, token, url):
     data = {'name':			name,
             'description':	'',
             'type':			'',
-            'source':		'SaltStack',
+            'source':		'SALT',
             'icon':         'salt'}
     headers = {'HTTPAuthorization': token}
     req = requests.post(url, data=data, headers=headers, timeout=1)
